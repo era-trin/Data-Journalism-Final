@@ -16,7 +16,8 @@ def macro_page():
 
 @app.route('/borough')
 def micro_page():
-    return render_template("borough.html")
+    selected_borough = request.args.get('borough', 'Unknown Borough')
+    return render_template("borough.html", borough=selected_borough)
 
 app.run(debug=True)
 

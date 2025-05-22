@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>COVID-19 Hospitalizations In {%borough%}</title>
+    <title>COVID-19 Hospitalizations In {{borough}}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 
     <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -15,11 +15,31 @@
 
 {%include 'navbar.html' %}
 
-<h1>Insert Borough</h1>
+
+
+
+
+
+<h1>{{borough}}</h1>
  </p>
 
+  {% if borough == "Manhattan" %}
+    {% include 'manhattan.svg' %}
+  {% endif %}
+  {% if borough == "Queens" %}
+    {% include 'manhattan.svg' %}
+  {% endif %}
+  {% if borough == "Bronx" %}
+    {% include 'manhattan.svg' %}
+  {% endif %}
+  {% if borough == "Brooklyn" %}
+    {% include 'manhattan.svg' %}
+  {% endif %}
+  {% if borough == "Staten Island" %}
+    {% include 'manhattan.svg' %}
+  {% endif %}
 
-<a href="https://catalog.data.gov/dataset/covid-19-daily-counts-of-cases-hospitalizations-and-deaths">COVID-19 Data</a>
+{%include 'footer.html'%}
     
 </body>
 </html>
