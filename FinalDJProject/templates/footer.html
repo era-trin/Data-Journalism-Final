@@ -7,7 +7,28 @@
 </head>
 <body>
 
-<a href="https://catalog.data.gov/dataset/covid-19-daily-counts-of-cases-hospitalizations-and-deaths">COVID-19 Data</a>
+<footer class="footer">
+
+
+  {% if borough == "Manhattan" %}
+    <p>Data for Manhattan provided by NYC Open Data.</p>
+  {% elif borough == "Brooklyn" %}
+    <p>Data for Brooklyn provided by NYC Open Data.</p>
+  {% elif borough == "Queens" %}
+    <p>Data for Queens provided by NYC Open Data.</p>
+  {% elif borough == "Bronx" %}
+    <p>Data for Bronx provided by NYC Open Data.</p>
+  {% elif borough == "Staten Island" %}
+    <p>Data for Staten Island provided by NYC Open Data.</p>
+  {% else %}
+    <p>COVID-19 Data provided by NYC Open Data.</p>
+  {% endif %}
+
+
+
+
+    <a href="https://catalog.data.gov/dataset/covid-19-daily-counts-of-cases-hospitalizations-and-deaths">COVID-19 Data</a>
+</footer>
     
 </body>
 </html>
