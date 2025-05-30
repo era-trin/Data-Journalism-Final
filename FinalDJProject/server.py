@@ -14,21 +14,9 @@ def home():
 def macro_page():
     with open("FinalDJProject/Data/borough_data.json","r") as f:
         raw_data = json.load(f)
-    
-    all_data = {}
-    for date_entry in raw_data:
-        date_name = date_entry["Date"]
-        date_data = {
-            year: float(value)
-            for year, value in date_entry.items()
-            if year.isdigit()
-        }
-        all_data[date_name] = date_data
 
-    years = sorted(list(all_data["03/02/2020"].keys()), key= int)
-        
-
-    return render_template("index.html",years=years)
+    all_dates = [entry["Date"] for entry in raw_data]
+    return render_template("index.html",dates=all_dates)
 
 @app.route('/borough')
 def micro_page():
