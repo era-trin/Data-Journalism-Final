@@ -892,4 +892,28 @@
 
 <sodipodi:namedview  objecttolerance="10" pagecolor="#ffffff" borderopacity="1" inkscape:cy="247.2" inkscape:cx="250" guidetolerance="10" bordercolor="#666666" gridtolerance="10" inkscape:zoom="1.5230583" showgrid="false" id="namedview138" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1680" inkscape:window-height="1000" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="katman_1">
 	</sodipodi:namedview>
+
+
+
+
+<rect x="240" y="630" width="60" height="60" fill="hsl(0, 100%, 85%)"/>
+<text x="120" y="660" fill="black" font-size="36"> < 50</text>
+
+<rect x="240" y="710" width="60" height="60" fill="hsl(0, 100%, 70%)"/>
+<text x="150" y="740" fill="black" font-size="36">50</text>
+
+<rect x="240" y="790" width="60" height="60" fill="hsl(0, 100%, 55%)"/>
+<text x="150" y="820" fill="black" font-size="36">100</text>
+
+<rect x="240" y="870" width="60" height="60" fill="hsl(0, 100%, 40%)"/>
+<text x="150" y="900" fill="black" font-size="36">200</text>
+
+<rect x="240" y="950" width="60" height="60" fill="hsl(0, 100%, 25%)"/>
+<text x="150" y="980" fill="black" font-size="36">300</text>
+
+<rect x="240" y="1030" width="60" height="60" fill="hsl(0, 100%, 15%)"/>
+<text x="150" y="1060" fill="black" font-size="36">400</text>
+
+<rect x="240" y="1110" width="60" height="60" fill="hsl(0, 100%, 5%)"/>
+<text x="150" y="1140" fill="black" font-size="36">500+</text>
 </svg>
