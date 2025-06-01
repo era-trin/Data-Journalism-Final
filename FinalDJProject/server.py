@@ -7,21 +7,18 @@ import json
 app = Flask(__name__, static_url_path='', static_folder='static')
 
 def hospitalized_to_hsl(life):
- 
     legend = [
-        (50, "hsl(0, 100%, 85%)"),
-        (100, "hsl(0, 100%, 55%)"),
-        (200, "hsl(0, 100%, 40%)"),
-        (300, "hsl(0, 100%, 25%)"),
-        (400, "hsl(0, 100%, 15%)"),
-        (500, "hsl(0, 100%, 5%)")
-
+        (50,  "hsl(0, 100%, 80%)"),   
+        (100, "hsl(0, 100%, 70%)"),   
+        (200, "hsl(0, 100%, 50%)"),   
+        (300, "hsl(0, 100%, 15%)"),  
+        (400, "hsl(0, 100%, 10%)"),   
+        (500, "hsl(0, 100%, 5%)")    
     ]
-    
     for val, hsl in reversed(legend):
         if life >= val:
             return hsl
-    return "hsl(0,100%,85%)"
+    return "hsl(0, 100%, 95%)"  
 
 
 @app.route('/about')
