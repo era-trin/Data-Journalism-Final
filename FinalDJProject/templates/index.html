@@ -27,15 +27,13 @@
 </div>
 
   <div>
-    <form method="/" method="GET">
-      <label for="date">Choose a date:</label><br>
-      <select name="date" id="date">
+    <form method="get" action="/">
+      <select name="date" onchange="this.form.submit()">
         {% for date in dates %}
-          <option value="{{ date }}"{% if date == selected_date %}selected{% endif %}>{{ date }}</option>
+          <option value="{{ date }}" {% if date == selected_date %}selected{% endif %}>{{ date }}</option>
         {% endfor %}
-        </select>
-      <input type="submit" value="Submit">
-    <form>
+      </select>
+    </form>
   </div>
 
 
