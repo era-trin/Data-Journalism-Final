@@ -23,42 +23,12 @@
 <h1>{{borough}}</h1>
 
 
-<div>
-  <form action="/year" method="GET">
-    <label for="year">Choose a year:</label><br>
-    
 
-      <select name="year" id="year_select">
-      {% for year in years %}
-        <option value="{{ year }}">{{ year }}</option>
-      {% endfor %}
-      </select>
-            
-
-    <input type="submit" value="Submit">
-  <form>
-</div>
 
 
  </p>
 
-  {% if borough == "Manhattan" %}
-    {% include 'manhattan.svg' %}
-  {% endif %}
-  {% if borough == "Queens" %}
-    {% include 'queens.svg' %}
-  {% endif %}
-  {% if borough == "Bronx" %}
-    {% include 'bronx.svg' %}
-  {% endif %}
-  {% if borough == "Brooklyn" %}
-    {% include 'brooklyn.svg' %}
-  {% endif %}
-  {% if borough == "Staten Island" %}
-    {% include 'statenisland.svg' %}
-  {% endif %}
-
-{%include 'footer.html'%}
+{%include 'line_graph.svg'%}
     
 </body>
 </html>

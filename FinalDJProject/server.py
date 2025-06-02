@@ -55,8 +55,37 @@ def macro_page():
 
 @app.route('/borough')
 def micro_page():
+    with open("FinalDJProject/Data/borough_data.json", "r") as f:
+        raw_data = json.load(f)
+    all_dates = [entry["Date"] for entry in raw_data]
+    selected_date = request.args.get('date')
+    if not selected_date or selected_date not in all_dates:
+        selected_date = all_dates[0]
+    selected_data = next((entry for entry in raw_data if entry["Date"] == selected_date), None)
+    
+    dates = []
+    manhattan = []
+    brooklyn = []
+    staten_island = []
+    queens = []
+    bronx = []
+    total = []
+    for entry in raw_data:
+        if all(k in entry for k in ["MN_HOSPITALIZED_COUNT", "BK_HOSPITALIZED_COUNT", "QN_HOSPITALIZED_COUNT", "BX_HOSPITALIZED_COUNT", "SI_HOSPITALIZED_COUNT"]):
+            dates.append(entry["Date"])
+            manhattan.append(int(entry["MN_HOSPITALIZED_COUNT"]))
+            brooklyn.append(int(entry["BK_HOSPITALIZED_COUNT"]))
+            staten_island.append(int(entry["SI_HOSPITALIZED_COUNT"]))
+            queens.append(int(entry["QN_HOSPITALIZED_COUNT"]))
+            bronx.append(int(entry["BX_HOSPITALIZED_COUNT"]))
+            total.append(int(entry["MN_HOSPITALIZED_COUNT"]) +
+                int(entry["BK_HOSPITALIZED_COUNT"]) +
+                int(entry["QN_HOSPITALIZED_COUNT"]) +
+                int(entry["BX_HOSPITALIZED_COUNT"]) +
+                int(entry["SI_HOSPITALIZED_COUNT"]))
+ 
     selected_borough = request.args.get('borough', 'Unknown Borough')
-    return render_template("borough.html", borough=selected_borough)
+    return render_template("borough.html", borough=selected_borough,dates = all_dates,graph_dates = dates,graph_manhattan = manhattan, graph_brooklyn = brooklyn, graph_statenisland = staten_island, graph_queens = queens, graph_bronx = bronx, graph_total = total, selected_date=selected_date, max=max)
 
 app.run(debug=True)
 
