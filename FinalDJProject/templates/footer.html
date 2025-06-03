@@ -9,36 +9,53 @@
 
 <footer class="footer">
 
-
   {% if borough == "Manhattan" %}
-    <p>Data for Manhattan provided by NYC Open Data.</p>
-  {% elif borough == "Brooklyn" %}
-    <p>Data for Brooklyn provided by NYC Open Data.</p>
-  {% elif borough == "Queens" %}
-    <p>Data for Queens provided by NYC Open Data.</p>
-  {% elif borough == "Bronx" %}
-    <p>Data for Bronx provided by NYC Open Data.</p>
-  {% elif borough == "Staten Island" %}
-    <p>Data for Staten Island provided by NYC Open Data.</p>
-  {% else %}
-    <p style = "margin-top:20px" >Some of the takeaways from this project include the following:<br>
-      1) Brooklyn and Queens had the highest number of hospitalizations <br>
-      during the peaks of the pandemic. This was unsurprising because it reflected their
-      larger populations. <br>
-      
-      2) The Bronx had the highest hospitalizations per capita.<br>
-      
-      3) Staten Island had the lowest number of hospitalizations largely due <br>
-      its proportionally small population.
+    <p>
+      Data for Manhattan provided by NYC Open Data.<br>
+      Manhattan had its highest hospitalizations on {{ manhattan_peak_date }} ({{ manhattan_peak_value }} hospitalizations).<br>
+      The lowest was on {{ manhattan_min_date }} ({{ manhattan_min_value }} hospitalizations).<br>
+      Manhattan's population is about 1.6 million, and its total hospitalizations were {{ manhattan_total }} out of NYC's {{total}} hospitalizations.
     </p>
-      
-      COVID-19 Data provided by NYC Open Data.</p>
+  {% elif borough == "Brooklyn" %}
+    <p>
+      Data for Brooklyn provided by NYC Open Data.<br>
+      Brooklyn had its highest hospitalizations on {{ brooklyn_peak_date }} ({{ brooklyn_peak_value }} hospitalizations).<br>
+      The lowest was on {{ brooklyn_min_date }} ({{ brooklyn_min_value }} hospitalizations).<br>
+      Brooklyn's population is about 2.7 million, and its total hospitalizations were {{ brooklyn_total }}, the most per borough out of NYC's {{total}} hospitalizations.
+    </p>
+  {% elif borough == "Queens" %}
+    <p>
+      Data for Queens provided by NYC Open Data.<br>
+      Queens had its highest hospitalizations on {{ queens_peak_date }} ({{ queens_peak_value }} hospitalizations).<br>
+      The lowest was on {{ queens_min_date }} ({{ queens_min_value }} hospitalizations).<br>
+      Queens' population is about 2.4 million, and its total hospitalizations were {{ queens_total }} in comparison to NYC's {{total}} hospitalizations.
+    </p>
+  {% elif borough == "Bronx" %}
+    <p>
+      Data for Bronx provided by NYC Open Data.<br>
+      The Bronx had its highest hospitalizations on {{ bronx_peak_date }} ({{ bronx_peak_value }} hospitalizations).<br>
+      The lowest was on {{ bronx_min_date }} ({{ bronx_min_value }} hospitalizations).<br>
+      The Bronx's population is about 1.4 million, and its total hospitalizations were {{ bronx_total }}.
+    </p>
+  {% elif borough == "Staten Island" %}
+    <p>
+      Data for Staten Island provided by NYC Open Data.<br>
+      Staten Island had its highest hospitalizations on {{ statenisland_peak_date }} ({{ statenisland_peak_value }} hospitalizations).<br>
+      The lowest was on {{ statenisland_min_date }} ({{ statenisland_min_value }} hospitalizations).<br>
+      Staten Island's population is about 500 thousand, and its total hospitalizations were only {{ statenisland_total }} out of NYC's {{total}} hospitalizations.
+    </p>
+  {% else %}
+    <p style="margin-top:20px">
+      Some of the takeaways from this project include the following:<br>
+      1) Brooklyn and Queens had the highest number of hospitalizations during the peaks of the pandemic, reflecting their larger populations.<br>
+      2) The Bronx had the highest hospitalizations per capita.<br>
+      3) Staten Island had the lowest number of hospitalizations largely due to its proportionally small population.<br>
+      The highest total hospitalizations in NYC occurred on {{ total_peak_date }} ({{ total_peak_value }} hospitalizations).
+    </p>
+    COVID-19 Data provided by NYC Open Data.
   {% endif %}
 
-
-
-
-    <a href="https://catalog.data.gov/dataset/covid-19-daily-counts-of-cases-hospitalizations-and-deaths">COVID-19 Data</a>
+  <a href="https://catalog.data.gov/dataset/covid-19-daily-counts-of-cases-hospitalizations-and-deaths">COVID-19 Data</a>
 </footer>
     
 </body>
