@@ -76,7 +76,7 @@ def micro_page():
     selected_date = request.args.get('date')
     if not selected_date or selected_date not in all_dates:
         selected_date = all_dates[0]
-    selected_data = next((entry for entry in raw_data if entry["Date"] == selected_date), None)
+
     
     dates = []
     manhattan = []
