@@ -894,28 +894,28 @@
 	</sodipodi:namedview>
 
 
+<text x="150" y="600" fill="black" font-size="36">COVID-19 Hospitalizations:</text>
 
+<rect x="250" y="630" width="60" height="60" fill="hsl(0, 100%, 95%)"/>
+<text x="120" y="680" fill="black" font-size="36"> < 50</text>
 
-<rect x="240" y="630" width="60" height="60" fill="hsl(0, 100%, 95%)"/>
-<text x="120" y="660" fill="black" font-size="36"> < 50</text>
+<rect x="250" y="710" width="60" height="60" fill="hsl(0, 100%, 80%)"/>
+<text x="150" y="760" fill="black" font-size="36">50</text>
 
-<rect x="240" y="710" width="60" height="60" fill="hsl(0, 100%, 80%)"/>
-<text x="150" y="740" fill="black" font-size="36">50</text>
+<rect x="250" y="790" width="60" height="60" fill="hsl(0, 100%, 70%)"/>
+<text x="150" y="840" fill="black" font-size="36">100</text>
 
-<rect x="240" y="790" width="60" height="60" fill="hsl(0, 100%, 70%)"/>
-<text x="150" y="820" fill="black" font-size="36">100</text>
+<rect x="250" y="870" width="60" height="60" fill="hsl(0, 100%, 50%)"/>
+<text x="150" y="920" fill="black" font-size="36">200</text>
 
-<rect x="240" y="870" width="60" height="60" fill="hsl(0, 100%, 50%)"/>
-<text x="150" y="900" fill="black" font-size="36">200</text>
+<rect x="250" y="950" width="60" height="60" fill="hsl(0, 100%, 15%)"/>
+<text x="150" y="1000" fill="black" font-size="36">300</text>
 
-<rect x="240" y="950" width="60" height="60" fill="hsl(0, 100%, 15%)"/>
-<text x="150" y="980" fill="black" font-size="36">300</text>
+<rect x="250" y="1030" width="60" height="60" fill="hsl(0, 100%, 10%)"/>
+<text x="150" y="1080" fill="black" font-size="36">400</text>
 
-<rect x="240" y="1030" width="60" height="60" fill="hsl(0, 100%, 10%)"/>
-<text x="150" y="1060" fill="black" font-size="36">400</text>
-
-<rect x="240" y="1110" width="60" height="60" fill="hsl(0, 100%, 5%)"/>
-<text x="150" y="1140" fill="black" font-size="36">500+</text>
+<rect x="250" y="1110" width="60" height="60" fill="hsl(0, 100%, 5%)"/>
+<text x="150" y="1160" fill="black" font-size="36">500+</text>
 </svg>
 
 
